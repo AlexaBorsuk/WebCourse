@@ -1,0 +1,318 @@
+$buttonColor: #f69321;
+$textColor: #ffffff;
+$full_width: 100%;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 1700px;
+    margin: 0 auto;
+}
+
+.font{
+    font-family: "Segoe UI", serif;
+    text-align: center;
+}
+
+.header{
+    background-color: white;
+    height: 110px;
+    width: $full_width;
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        margin: 20px 30px;
+        width: 70px;
+        height: 70px;
+    }
+    .buttonSubscribe{
+        height: 42px;
+        width: 220px;
+        background-color: $buttonColor;
+        border: none;
+        margin-right: 30px;
+        margin-top: 30px;
+        font-size: 20px;
+        color: $textColor;
+        text-decoration: none;
+        user-select: none;
+        padding: 15px 0 0 0;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.section1_mountain{
+    background-image: url("../img/mountain-back.png");
+    height: 878px;
+    width: $full_width;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-rectangle{
+    background-image: url("../img/back-rectangle.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 840px;
+    height: 220px;
+    color: white;
+}
+
+.back-rectangle_text{
+    font-size: 48px;
+}
+
+.section2_bus{
+    height: 757px;
+    width: $full_width;
+    display: flex;
+    align-items: center;
+}
+
+.section2_bus_textContent{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2_bus_textContent_Title{
+    font-size: 40px;
+    font-family: "Segoe UI", serif;
+    color: #000000;
+    align-self: center;
+}
+
+.section2_bus_textContent_Text{
+    color: #666666;
+    font-size: 20px;
+    text-align: left;
+    align-self: center;
+}
+
+.btn_for_slider{
+    height: 28px;
+    width: 70px;
+    margin-top: 75px;
+    margin-right: 200px;
+    align-self: flex-end;
+    display: flex;
+}
+
+.section2_bus_imageContent{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 0.8;
+    background-image: url("../img/background-bus.png");
+}
+
+.section3_subscribe{
+    background-image: url("../img/subscribe_background.png");
+    width: $full_width;
+    height: 933px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.section3_subscribeContent{
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 30px;
+}
+
+.section3_subscribe_logo{
+    font-weight: 500;
+    color: white;
+}
+
+.logo2{
+    height: 70px;
+    width: 302px;
+    margin-bottom: 25px;
+}
+
+.section3_subscribeForm{
+    margin-top: 45px;
+    color: $textColor;
+}
+
+.section3_subscribeInput{
+    margin-top: 15px;
+    width: 365px;
+    height: 50px;
+    background: none;
+    border: 2px white solid;
+    color: $textColor;
+    font-size: 20px;
+    text-indent: 10px;
+}
+
+input::placeholder{
+    color: $textColor;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.section3_buttonSubscribe{
+    background-color: $buttonColor;
+    border: none;
+    margin-top: 30px;
+    margin-left: 35px;
+    font-size: 20px;
+    color: $textColor;
+    text-decoration: none;
+    user-select: none;
+    padding: 13px 30px 13px 30px;
+}
+
+.section4_information{
+    width: $full_width;
+    //height: 1090px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section4_informationTitle{
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 110px;
+}
+
+.section4_informationSubtitle{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.section4_informationText{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.section4_information_image_description_group{
+    width: $full_width;
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    margin-top: 135px;
+    margin-bottom: 125px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 30px;
+
+        .description{
+            margin-top: 30px;
+        }
+
+        .textImage3{
+            font-size: 48px;
+        }
+    }
+}
+
+.section5_contactUs{
+    background-color: #efefef;
+    height: 769px;
+    width: $full_width;
+    display: flex;
+}
+
+.section5_contactUs_form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section5_contactUs_title{
+    margin-left: 40px;
+    margin-top: 70px;
+    font-family: "Segoe UI", serif;
+    font-size: 36px;
+}
+
+.section5_contactUs_form_topic{
+    margin-left: 40px;
+    margin-top: 50px;
+    font-family: "Segoe UI", serif;
+    font-size: 24px;
+}
+
+.section5_form_topic{
+    margin-top: 15px;
+    width: 745px;
+    height: 48px;
+    border: 2px black solid;
+    color: black;
+    font-size: 20px;
+    text-indent: 10px;
+}
+
+.section5_contactUs_form_message{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-family: "Segoe UI", serif;
+    font-size: 24px;
+}
+
+.section5_form_message{
+    margin-top: 15px;
+    width: 745px;
+    height: 245px;
+    border: 2px black solid;
+    color: black;
+    font-size: 20px;
+    text-indent: 10px;
+    resize: none;
+    padding: 10px;
+}
+
+.section5_buttonSend{
+    height: 40px;
+    width: 185px;
+    background-color: $buttonColor;
+    border: none;
+    margin-top: 30px;
+    margin-left: 35px;
+    font-size: 20px;
+    color: $textColor;
+    text-decoration: none;
+    user-select: none;
+    padding: 15px 0 0 0;
+    text-align: center;
+}
+
+.section5_contactUs_image{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 50%;
+    background-image: url("../img/section5_table.png");
+}
