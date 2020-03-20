@@ -6,8 +6,28 @@ $full_width: 100%;
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", serif;
-    //text-align: center;
 }
+
+//@media screen and (max-width: 1280px) {
+//    div.wrap {width: 1200px;}
+//}
+//@media screen and (max-width: 1140px) {
+//    div.wrap {width: 1024px;}
+//}
+@media screen and (max-width: 992px) {
+    div.wrap {width: 900px;}
+    div.section2_bus_textContent{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    input.section5_form_topic{
+        width: 500px;
+    }
+    textarea.section5_form_message{
+        width: 500px;
+    }
+}
+
 
 .wrap {
     max-width: 1700px;
@@ -17,7 +37,7 @@ $full_width: 100%;
 .header {
     background-color: white;
     height: 110px;
-    width: $full_width;
+    max-width: $full_width;
     display: flex;
     justify-content: space-between;
     .logo{
@@ -74,7 +94,7 @@ $full_width: 100%;
 
 .section2_bus{
     height: 757px;
-    width: $full_width;
+    max-width: $full_width;
     display: flex;
     align-items: center;
     &_textContent{
@@ -121,7 +141,7 @@ $full_width: 100%;
 
 .section3_subscribe{
     background-image: url("../img/subscribe_background.png");
-    width: $full_width;
+    max-width: $full_width;
     height: 933px;
     display: flex;
     align-items: flex-start;
@@ -142,7 +162,7 @@ $full_width: 100%;
 
 .logo2{
     height: 70px;
-    width: 302px;
+    max-width: 302px;
     margin-bottom: 25px;
 }
 
@@ -179,7 +199,7 @@ $full_width: 100%;
 }
 
 .section4_information{
-    width: $full_width;
+    max-width: $full_width;
     display: flex;
     flex-direction: column;
     &_title{
@@ -201,7 +221,7 @@ $full_width: 100%;
 }
 
 .section4_information_image_description_group{
-    width: $full_width;
+    max-width: $full_width;
     display: flex;
     flex-direction: row;
     align-items: normal;
@@ -230,7 +250,7 @@ $full_width: 100%;
 .section5_contactUs{
     background-color: #efefef;
     height: 769px;
-    width: $full_width;
+    max-width: $full_width;
     display: flex;
     &_form{
         width: 50%;
