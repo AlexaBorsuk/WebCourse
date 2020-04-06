@@ -15,11 +15,11 @@ function game(){
 }
 
 function name(gamer) {
-    gamer['name'] = prompt(`Як Вас звуть ?`, '_no_name_')
+    gamer['name'] = prompt('Як Вас звуть ?', '_no_name_')
 }
 
 function childNumber(gamer) {
-    gamer['child_number'] = prompt(`Скільки діточок Ви хочете`,'0');
+    gamer['child_number'] = prompt('Скільки діточок Ви хочете','0')
 }
 
 function jobTitle(gamer) {

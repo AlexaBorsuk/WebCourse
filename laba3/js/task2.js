@@ -4,7 +4,7 @@ let numberOfRows = prompt('Please input number  of rows for Pascale Triangle: ',
 
 let makePaskalTriangle = function(rows) {
     let trigon = [[1], [1, 1]];
-    let str = `TRIGON OF PASKAL<br/>`;
+    let str = 'TRIGON OF PASKAL<br/>';
     if(rows === '0'){
         return alert('Invalid number of rows!');
     }
@@ -35,9 +35,9 @@ let generateRow = function(trigon){
 };
 
 let stringForHtml = function(array){
-    let str = '<br/>';
-    //array.forEach(element => str += element + '<br/>');
-    return array.reduce((str, current) => str + current + '<br/>' );
+    //thank you for the help
+    const breakLine = '<br />';
+    return array.reduce((accumulator, str) => accumulator + str + breakLine, breakLine);
 };
 
 document.write(makePaskalTriangle(numberOfRows));
