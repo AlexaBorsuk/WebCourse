@@ -2,7 +2,7 @@
 game();
 
 function game(){
-    let propose = confirm('Давай пограємо у "Передбачувач майбутнього" ?');
+    let propose = confirm('Давай пограємо у Передбачувач майбутнього ?');
     if (propose){
         let gamer = {};
         name(gamer);
@@ -15,11 +15,11 @@ function game(){
 }
 
 function name(gamer) {
-    gamer['name'] = prompt('Як Вас звуть ?', '_no_name_')
+    gamer['name'] = prompt(`Як Вас звуть ?`, '_no_name_')
 }
 
 function childNumber(gamer) {
-    gamer['child_number'] = prompt('Скільки діточок Ви хочете','0');
+    gamer['child_number'] = prompt(`Скільки діточок Ви хочете`,'0');
 }
 
 function jobTitle(gamer) {
@@ -35,8 +35,8 @@ function country(gamer) {
 }
 
 function result(gamer) {
-    let gameResult = `Ну що ж, ` + gamer['name'] + `!\n` + `Вашого партнера зватимуть ` + gamer['lover_name'] +
-    ` і Ви разом будете виховувати ` + gamer['child_number'] + ` дитя(дітей) \n` + `Ваше сімейство житиме у країні - ` +
-        gamer['country'] + ' ,а посада, яку Ви займатимите - ' + gamer['job_title'] + `)))`;
+    let gameResult = `Ну що ж, ${gamer['name']}!\nВашого партнера зватимуть ${gamer['lover_name']} і Ви разом будете 
+    виховувати ${gamer['child_number']} дитя(дітей) \nВаше сімейство житиме у країні - ${gamer['country']},а посада, 
+    яку Ви займатимите - ${gamer['job_title']})))`;
     alert(gameResult);
 }

@@ -11,10 +11,10 @@ let arr = [
 
 //console.log(arr);
 
-let resultSum = arr.filter(x => {return x.type === 'USD' && x.value < 100; })
+let resultSum = arr.filter(x => x.type === 'USD' && x.value < 100)
     .map(newArr => newArr.value).reduce((previousValue, currentValue)=> previousValue + currentValue);
 
-//console.log(resultSum);
+console.log(resultSum);
 
 let resultMultiple = arr.filter(x => {return x.type === 'EUR'}).map(newArr => {return {value: newArr.value*2, type: newArr.type}});
 //console.log(resultMultiple);
@@ -25,4 +25,4 @@ let message = function(resSum, resArr){
     return str;
 };
 
-document.write(message(resultSum,resultMultiple));
+//document.write(message(resultSum,resultMultiple));
