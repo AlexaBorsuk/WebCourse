@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2 Lab 6</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>-->
+    <!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>-->
+    <!--    <script src="http://malsup.github.com/jquery.form.js"></script>-->
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+<div class="main">
+    <div class="btn_sbm">
+        <button class="btn btn-success" id="button" >Завантажити працівників</button>
+    </div>
+    <table class="table table-hover "></table>
+    <div id="list"></div>
+
+</div>
+
+<script>
+$("button").click(function () {
+    $.getJSON("http://dummy.restapiexample.com/api/v1/employees", function (json) {
+        json.data.forEach(value => {
+            let row = $("<tr></tr>");
+            let id = $("<td></td>").text(value.id);
+            let name = $("<td></td>").text(value.employee_name);
+            let salary = $("<td></td>").text(value.employee_salary);
+            let age = $("<td></td>").text(value.employee_age);
+            row.append(id);
+            row.append(name);
+            row.append(salary);
+            row.append(age);
+            $("table").append(row);
+        });
+    });
+});
+</script>
+
+</body>
+</html>

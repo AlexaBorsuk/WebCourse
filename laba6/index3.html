@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab6_3</title>
+    <link href="css/style3.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../node_modules/moment/min/moment.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="timer">
+            <div id="screen" class="screen">00:00</div>
+            <div class="buttons">
+                <button id="btnStart">GO/STOP</button>
+                <button id="btnReset">RESET</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let startState = false;
+        let currTime;
+
+        $(document).ready(function () {
+            $('#btnStart').click(function () {
+                startState = ! startState;
+                if (startState) currTime = setInterval(AddOneSec, 1000);
+                else clearInterval(currTime);
+            });
+            $('#btnReset').click(function () {
+                clearInterval(currTime);
+                $('#screen').text(moment("00:00", "mm:ss").format("mm:ss"));
+            })
+        });
+
+        let timer = moment("00:00", "mm:ss");
+        function AddOneSec() {
+            timer.add(1, "s");
+            $('#screen').text(timer.format("mm:ss"));
+        }
+
+    </script>
+</body>
+</html>
